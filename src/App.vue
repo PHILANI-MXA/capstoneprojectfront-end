@@ -1,10 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<NavComponent/>
+<footer-comp/>
 </template>
+
+
+<script>
+import FooterComp from './components/FooterComp.vue';
+import NavComponent from './components/NavComponent.vue';
+
+ export default {
+  name: '',
+  components: {
+    NavComponent,
+    FooterComp
+}
+ }
+</script>
 
 <style lang="scss">
 #app {
@@ -26,5 +37,9 @@ nav {
       color: #42b983;
     }
   }
+}
+
+body{
+    background-color: rgb(242,227,228);
 }
 </style>
