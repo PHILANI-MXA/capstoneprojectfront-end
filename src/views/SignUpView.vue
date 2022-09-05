@@ -5,11 +5,11 @@
     <form class="container border border-black h-100" @submit.prevent="register">
     
   <div class="form-group">
-    <label for="firstName">Firstname</label>
+    <label for="firstName">First Name</label>
     <input type="text" class="form-control pass m-auto" id="firstName" v-model="firstName">
   </div>
     <div class="form-group">
-    <label for="lastName">lastName</label>
+    <label for="lastName">Last tName</label>
     <input type="text" class="form-control pass m-auto" id="lastName" v-model="lastName">
   </div>
     <div class="form-group">

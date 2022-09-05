@@ -1,5 +1,5 @@
 <template>
-    <div class="container min-vh-100 p-5">
+<div class="container min-vh-100 p-5">
 
 <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
 <div class=" row d-flex justify-content-center justify-content-between">
