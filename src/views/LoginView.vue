@@ -9,7 +9,7 @@
   </div>
    <div class="form-group">
     <label for="password">password</label>
-    <input type="password" class="form-control pass m-auto" id="password" v-model="user_password">
+    <input type="password" class="form-control pass m-auto" id="password" v-model="password">
   </div>
   <button class="btn btn-primary my-5" type="submit">Submit</button>
 </form>
@@ -39,7 +39,6 @@ export default {
         });
         }
     }
-    
 }
 
 </script>

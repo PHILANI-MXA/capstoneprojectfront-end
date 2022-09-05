@@ -28,6 +28,10 @@ export default createStore({
     },
     setProduct (state, value) {
       state.product = value;
+    },
+    setfavourites: (state, favourites) => {
+      state.favourites = favourites;
+      console.log(favourites);
     }
 
   },
@@ -63,15 +67,15 @@ export default createStore({
     },
 
     register: async (context, payload) => {
-      const { firsName, LastName, email, password } = payload;
+      const { firstName, lastName, email, password } = payload;
       const data = {
-        firsName,
-        LastName,
+        firstName,
+        lastName,
         email,
         password
       };
       const res = await axios.post(bookLib + 'users/register', data);
-      const results = await res.data;
+      const { results } = await res.data;
       if (results) {
         context.commit('setUsers', results);
       }
@@ -87,6 +91,73 @@ export default createStore({
       if (results) {
         router.push({ name: 'allbooks' });
       }
+    },
+    getCart: (context, id) => {
+      if (context.state.users.user_id === null) {
+        alert('Please Login');
+      } else {
+        id = context.state.users.user_id;
+        fetch(`https://capt.herokuapp.com/users/${id}/cart`, {
+          method: 'GET',
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+            'x-auth-token': context.state.token
+          }
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            // console.log(data);
+            if (data.results != null) {
+              context.commit('setCart', (data.results));
+            }
+          });
+      }
+    },
+
+    addTofavourites: async (context, product, id) => {
+      console.log(product);
+      const alert = { alert };
+      if (context.state.users === null) {
+        alert('Please Login');
+      } else {
+        id = context.state.users.user_id;
+        fetch(`http://localhost:3000/users/${id}/favourites`, {
+        // fetch(`https://capt.herokuapp.com/users/${id}/favourites`, {
+          method: 'POST',
+          body: JSON.stringify(product),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+            // "x-auth-token": context.state.token,
+          }
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            // if (data != null) {
+            context.dispatch('getfavourites', (id));
+            // }
+          });
+      }
+    },
+
+    DeletItem: async (context, product, id) => {
+      console.log(product);
+      id = context.state.users.user_id;
+      fetch(`http://localhost:3000/users/${id}/favourites/${product}`, {
+        method: 'DELETE',
+        body: JSON.stringify(product),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8'
+          // "x-auth-token": context.state.token,
+        }
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          // if (data != null) {
+          context.dispatch('getfavourites', (id));
+        // }
+        });
     }
   },
   modules: {
