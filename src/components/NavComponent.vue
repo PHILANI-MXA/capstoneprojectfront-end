@@ -24,6 +24,9 @@
              <router-link class="text-decoration-none text-black" to="/login">Login</router-link>
         </li>
           <li class="nav-item">
+          <router-link class="text-decoration-none text-black" to="/user">User</router-link>
+        </li>
+          <li class="nav-item">
           <router-link class="text-decoration-none text-black invisible" to="/admin">Admin</router-link>
         </li>
            <li class="nav-item">
@@ -64,6 +67,6 @@ z-index:50;
 }
 
 .favourite{
-    margin-left: 500px;
+    margin-left: 400px;
 }
 </style>

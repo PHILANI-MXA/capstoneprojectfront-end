@@ -1,36 +1,6 @@
 <template>
 <div class="container p-5">
   <h2 class="fw-bold fs-lg text-black">About</h2>
-      <div class="row">
-          <div class="col-sm-4 block1">
-      <h4 class="d-block justify-items center text-center"></h4>
-              <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://i.postimg.cc/nhts7Jv9/desola-lanre-ologun-Ig-UR1i-X0mq-M-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/WpgJX8sk/thought-catalog-o0-Qqw21-0-NI-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/NMVF0qsM/priscilla-du-preez-Xk-KCui44i-M0-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  </div>
-    </div>
-        <div class="col-sm-8 block2 overflow-auto text-black">
-          <h2></h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum blanditiis vero consectetur quis? Neque odio, molestiae quisquam quos hic consectetur atque harum dignissimos delectus accusantium minima beatae ad maiores aperiam repellat tempora ullam necessitatibus in sit deleniti earum cum voluptates nemo voluptatibus? Enim delectus, adipisci, sit asperiores tempora eius laboriosam maxime possimus laborum nobis labore, eaque earum! Optio sunt, voluptates, unde soluta incidunt necessitatibus, saepe nulla ullam sequi eaque nisi! Temporibus quasi reiciendis dolores aut quibusdam accusamus fugit excepturi suscipit praesentium, placeat corrupti adipisci delectus nobis esse exercitationem quas. Aliquam deleniti quo esse qui pariatur sunt, odio officiis repudiandae quis aut harum ipsa impedit suscipit ad quisquam cum. Perferendis amet accusamus, ullam cum aliquam ducimus eius eligendi at esse consectetur ea iure harum.</p>
-        </div>
-    </div>
     <div class="row">
       <div class=" emptyy vh-100 container w-100"></div>
     </div>

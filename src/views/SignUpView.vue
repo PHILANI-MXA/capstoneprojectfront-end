@@ -32,9 +32,13 @@
 
 <script>
 import router from '@/router';
+import SignUpView from '@/views/SignUpView'
 
 export default {
-
+  name: '',
+  components: {
+      SignUpView
+    },
     data() {
     return {
             firstName: '',

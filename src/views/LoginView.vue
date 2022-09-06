@@ -18,11 +18,11 @@
 </template>
 
 <script>
-
+import LoginView from '@/views/LoginView'
 export default {
     name: '',
     components: {
-
+        LoginView
     },
     data() {
         return {
