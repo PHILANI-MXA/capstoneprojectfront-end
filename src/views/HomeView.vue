@@ -34,7 +34,6 @@
     </div>
         <div class="col-sm-8 block2 overflow-auto text-black">
           <h2></h2>
-          <h3 class="Display-4">We promote diversity and equality</h3>
         </div>
     </div>
     <div class="row">
@@ -82,7 +81,7 @@
 			<svg class="progressbar__svg">
 				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-node shadow-node"> </circle>
 			</svg>
-			<span class="progressbar__text shadow-node">Node.js</span>
+			<span class="progressbar__text shadow-node">Faculties</span>
 		</div>
 	</div>
 
@@ -106,7 +105,7 @@
         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.postimg.cc/nhts7Jv9/desola-lanre-ologun-Ig-UR1i-X0mq-M-unsplash.jpg" class="d-block w-100" alt="responsive carou">
+      <img src="https://i.postimg.cc/WpgJX8sk/thought-catalog-o0-Qqw21-0-NI-unsplash.jpg" class="d-block w-100" alt="responsive carou">
     </div>
     <div class="carousel-item">
       <img src="https://i.postimg.cc/WpgJX8sk/thought-catalog-o0-Qqw21-0-NI-unsplash.jpg" class="d-block w-100" alt="responsive carou">
@@ -142,7 +141,7 @@
   </select>
   </div>
   <h4 class="text-black">Our core values</h4>
-  <ul class="w-100  list-unstyled">
+  <ul class="w-100  list-unstyled folder">
   <li><button class="w-100 list-unstyled text-black fw-bold">Love</button></li>
   <li><button class="w-100 list-unstyled text-black fw-bold">Caring</button></li>
   <li><button class="w-100 list-unstyled text-black fw-bold">Innovation</button></li>
@@ -219,12 +218,10 @@ h1 {
 height: 300px;
 background-color: rgb(242,227,228);
 border: 5px  black;
-
-background-image: url(https://postimg.cc/HjJXZ46Z) !important;
+background-image: url(https://i.postimg.cc/DzXnj0kZ/markus-spiske-f-Ynyfx3-UBxk-unsplash.jpg) !important;
 background-position: fixed !important;
-object-fit: cover !important;
-background-attachment: fixed !important;
-font-weight: bolder;
+object-fit: cover center/contain;
+background-position: center;
 }
 .block-contain {
   height: 620px;
@@ -306,19 +303,14 @@ $color-scss: hsl(300, 100%, 60%);
 $color-js: hsl(60, 100%, 60%);
 $color-ts: hsl(220, 100%, 60%);
 $color-node: hsl(110, 100%, 60%);
-$color-react: hsl(180, 100%, 60%);
-$color-angular: hsl(0, 100%, 60%);
-$color-vue: hsl(145, 100%, 60%);
 
-$porcent-html: 95;
-$porcent-css: 85;
-$porcent-scss: 70;
-$porcent-js: 80;
-$porcent-ts: 55;
-$porcent-node: 30;
-$porcent-react: 12;
-$porcent-angular: 5;
-$porcent-vue: 2;
+
+$porcent-html: 100;
+$porcent-css: 100;
+$porcent-scss: 100;
+$porcent-js: 100;
+$porcent-ts: 100;
+$porcent-node: 100;
 
 @function strokeDashoffset($num) {
 	@return 440 - (440 * $num) / 100;
@@ -328,13 +320,6 @@ $porcent-vue: 2;
 	box-sizing: border-box;
 }
 
-/*.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: $color-black;*/
-
 
 .container__progressbars {
 	display: flex;
@@ -343,7 +328,6 @@ $porcent-vue: 2;
 	flex-wrap: wrap;
 	min-width: 270px;
 	width: 100%;
-	min-height: 100%;
 }
 
 .progressbar {
@@ -391,15 +375,6 @@ $porcent-vue: 2;
 	&-node {
 		filter: drop-shadow(0 0 5px $color-node);
 	}
-	&-react {
-		filter: drop-shadow(0 0 5px $color-react);
-	}
-	&-angular {
-		filter: drop-shadow(0 0 5px $color-angular);
-	}
-	&-vue {
-		filter: drop-shadow(0 0 5px $color-vue);
-	}
 }
 
 .circle {
@@ -421,15 +396,7 @@ $porcent-vue: 2;
 	&-node {
 		animation: anim_circle-node 1s ease-in-out forwards;
 	}
-	&-react {
-		animation: anim_circle-react 1s ease-in-out forwards;
-	}
-	&-angular {
-		animation: anim_circle-angular 1s ease-in-out forwards;
-	}
-	&-vue {
-		animation: anim_circle-vue 1s ease-in-out forwards;
-	}
+	
 }
 
 .progressbar__text {
@@ -479,24 +446,7 @@ $porcent-vue: 2;
 	to {
 		stroke-dashoffset: strokeDashoffset($porcent-node);
 	}
-}
 
-@keyframes anim_circle-react {
-	to {
-		stroke-dashoffset: strokeDashoffset($porcent-react);
-	}
-}
-
-@keyframes anim_circle-angular {
-	to {
-		stroke-dashoffset: strokeDashoffset($porcent-angular);
-	}
-}
-
-@keyframes anim_circle-vue {
-	to {
-		stroke-dashoffset: strokeDashoffset($porcent-vue);
-	}
 }
 
 
