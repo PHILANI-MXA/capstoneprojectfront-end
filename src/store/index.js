@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-import router from '@/router';
+// import router from '@/router';
 import createPersistedState from 'vuex-persistedstate';
 
 const bookLib = 'https://capstone-fullstack-project.herokuapp.com/';
@@ -97,12 +97,15 @@ export default createStore({
       const res = await axios.post(bookLib + 'users/login', data);
       const results = await res.data;
       if (results) {
-        router.push({ name: 'favorites' });
+        console.log(results);
+        context.commit('SetUser', results);
+        // router.push({ name: 'favorites' });
       }
     },
     getfavourites: (context, id) => {
       if (context.state.users.user_id === null) {
-        alert('Please Login');
+        console.log('Please Login');
+        // alert('Please Login');
       } else {
         id = context.state.users.user_id;
         fetch(`https://capstone-fullstack-project.herokuapp.com/users/${id}/favourites`, {
@@ -125,7 +128,8 @@ export default createStore({
     addTofavourites: async (context, product, id) => {
       console.log(product);
       if (context.state.users === null) {
-        alert('Please Login');
+        console.log('Please Login');
+        // alert('Please Login');
       } else {
         id = context.state.users.user_id;
         fetch(`http://localhost:3000/users/${id}/favourites`, {

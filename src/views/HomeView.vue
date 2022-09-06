@@ -1,9 +1,15 @@
 <template>
 <div class="container p-3">
-  <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
+  <h4 class="bg-secondary">Rainbow Library</h4>
+  <div class="col">
+    <div class="row center">
+  <div><input type="text" id="" v-model="search" placeholder="Search" class="w-80 my-5 justify-content-center align-items-center">
+    </div>
+  </div>
+</div>
       <div class="row">
           <div class="col-sm-4 block1">
-      <h4 class="d-block justify-items center text-center"></h4>
+      <h4 class="d-block justify-items-center text-center"></h4>
               <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -28,11 +34,62 @@
     </div>
         <div class="col-sm-8 block2 overflow-auto text-black">
           <h2></h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum blanditiis vero consectetur quis? Neque odio, molestiae quisquam quos hic consectetur atque harum dignissimos delectus accusantium minima beatae ad maiores aperiam repellat tempora ullam necessitatibus in sit deleniti earum cum voluptates nemo voluptatibus? Enim delectus, adipisci, sit asperiores tempora eius laboriosam maxime possimus laborum nobis labore, eaque earum! Optio sunt, voluptates, unde soluta incidunt necessitatibus, saepe nulla ullam sequi eaque nisi! Temporibus quasi reiciendis dolores aut quibusdam accusamus fugit excepturi suscipit praesentium, placeat corrupti adipisci delectus nobis esse exercitationem quas. Aliquam deleniti quo esse qui pariatur sunt, odio officiis repudiandae quis aut harum ipsa impedit suscipit ad quisquam cum. Perferendis amet accusamus, ullam cum aliquam ducimus eius eligendi at esse consectetur ea iure harum.</p>
+          <h3 class="Display-4">We promote diversity and equality</h3>
         </div>
     </div>
     <div class="row">
-      <div class=" emptyy vh-100 container w-100"></div>
+      <div class=" empty h-100 container w-100"></div>
+      <div class="container">
+
+	<div class="container__progressbars">
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-html shadow-html"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-html">Computers</span>
+		</div>
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-css shadow-css"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-css">Labs</span>
+		</div>
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-scss shadow-scss"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-scss">Exams</span>
+		</div>
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-js shadow-js"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-js">Databases</span>
+		</div>
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-ts">Research</span>
+		</div>
+
+		<div class="progressbar">
+			<svg class="progressbar__svg">
+				<circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-node shadow-node"> </circle>
+			</svg>
+			<span class="progressbar__text shadow-node">Node.js</span>
+		</div>
+	</div>
+
+</div>
+
+<!-- My social networks (imported from another pen)-->
+<div id="main-container-social" class="main-container-social"></div>
     </div>
   <div class="row margin-top">
     <div class="col-sm-12 block-contain">
@@ -70,20 +127,33 @@
   <div>
     <select name="" id="" class="my-1">
       <option value="" disabled hidden selected>Books</option>
-      <option value="Spain"><a href="https://supersport.com/football/premier-league/logs/"></a>Biographies</option>
-      <option value="France">All Books</option>
-      <option value="Germany">None</option>
+      <option value="bio"><a href="https://supersport.com/football/premier-league/logs/"></a>Biographies</option>
+      <option value="all">All Books</option>
+      <option value="none">None</option>
 
   </select>
     <select name="" id="" aria-placeholder="search by category">
       <option value="" disabled hidden selected>Categories</option>
-      <option value="Bundasliga">Love stories</option>
-      <option value="SerieA<">Children's books</option>
-      <option value="La-liga">True Story</option>
-      <option value="Ligue1">Biographies</option>
-      <option value="eredivisie">Fantasy</option>
+      <option value="love">Love stories</option>
+      <option value="children<">Children's books</option>
+      <option value="Trues">True Story</option>
+      <option value="Bio">Biographies</option>
+      <option value="Fntsy">Fantasy</option>
   </select>
   </div>
+  <h4 class="text-black">Our core values</h4>
+  <ul class="w-100  list-unstyled">
+  <li><button class="w-100 list-unstyled text-black fw-bold">Love</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Caring</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Innovation</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Communication</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Support</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Honesty</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Respect</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Diversity</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Social Justice</button></li>
+  <li><button class="w-100 list-unstyled text-black fw-bold">Community Development</button></li>
+  </ul>
 </div>
 
 <div class="col-sm-12 col-md-3">
@@ -116,7 +186,12 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  .input{
+    align-content: center;
+    margin: auto;
+  }
 .container {
   text-align: center;
   color: white;
@@ -221,6 +296,209 @@ font-weight: bolder;
 .emptyy{
   height: 100;
 }
+
+$color-black: hsl(0, 0%, 5%);
+$color-color: hsl(0, 0%, 100%);
+
+$color-html: hsl(15, 100%, 60%);
+$color-css: hsl(200, 100%, 60%);
+$color-scss: hsl(300, 100%, 60%);
+$color-js: hsl(60, 100%, 60%);
+$color-ts: hsl(220, 100%, 60%);
+$color-node: hsl(110, 100%, 60%);
+$color-react: hsl(180, 100%, 60%);
+$color-angular: hsl(0, 100%, 60%);
+$color-vue: hsl(145, 100%, 60%);
+
+$porcent-html: 95;
+$porcent-css: 85;
+$porcent-scss: 70;
+$porcent-js: 80;
+$porcent-ts: 55;
+$porcent-node: 30;
+$porcent-react: 12;
+$porcent-angular: 5;
+$porcent-vue: 2;
+
+@function strokeDashoffset($num) {
+	@return 440 - (440 * $num) / 100;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: $color-black;*/
+
+
+.container__progressbars {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	min-width: 270px;
+	width: 100%;
+	min-height: 100%;
+}
+
+.progressbar {
+	position: relative;
+	width: 170px;
+	height: 170px;
+	margin: 1em;
+	transform: rotate(-90deg);
+}
+
+.progressbar__svg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.progressbar__svg-circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke-width: 10;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	stroke: hsl(0, 0%, 100%);
+	stroke-linecap: round;
+	transform: translate(5px, 5px); // stroke-width / 2
+}
+
+.shadow {
+	&-html {
+		filter: drop-shadow(0 0 5px $color-html);
+	}
+	&-css {
+		filter: drop-shadow(0 0 5px $color-css);
+	}
+	&-scss {
+		filter: drop-shadow(0 0 5px $color-scss);
+	}
+	&-js {
+		filter: drop-shadow(0 0 5px $color-js);
+	}
+	&-ts {
+		filter: drop-shadow(0 0 5px $color-ts);
+	}
+	&-node {
+		filter: drop-shadow(0 0 5px $color-node);
+	}
+	&-react {
+		filter: drop-shadow(0 0 5px $color-react);
+	}
+	&-angular {
+		filter: drop-shadow(0 0 5px $color-angular);
+	}
+	&-vue {
+		filter: drop-shadow(0 0 5px $color-vue);
+	}
+}
+
+.circle {
+	&-html {
+		animation: anim_circle-html 1s ease-in-out forwards;
+	}
+	&-css {
+		animation: anim_circle-css 1s ease-in-out forwards;
+	}
+	&-scss {
+		animation: anim_circle-scss 1s ease-in-out forwards;
+	}
+	&-js {
+		animation: anim_circle-js 1s ease-in-out forwards;
+	}
+	&-ts {
+		animation: anim_circle-ts 1s ease-in-out forwards;
+	}
+	&-node {
+		animation: anim_circle-node 1s ease-in-out forwards;
+	}
+	&-react {
+		animation: anim_circle-react 1s ease-in-out forwards;
+	}
+	&-angular {
+		animation: anim_circle-angular 1s ease-in-out forwards;
+	}
+	&-vue {
+		animation: anim_circle-vue 1s ease-in-out forwards;
+	}
+}
+
+.progressbar__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0.25em 0.5em;
+	color: hsl(0, 0%, 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 0.25em;
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+//  @keyframes
+
+@keyframes anim_circle-html {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-html);
+	}
+}
+
+@keyframes anim_circle-css {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-css);
+	}
+}
+
+@keyframes anim_circle-scss {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-scss);
+	}
+}
+
+@keyframes anim_circle-js {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-js);
+	}
+}
+
+@keyframes anim_circle-ts {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-ts);
+	}
+}
+
+@keyframes anim_circle-node {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-node);
+	}
+}
+
+@keyframes anim_circle-react {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-react);
+	}
+}
+
+@keyframes anim_circle-angular {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-angular);
+	}
+}
+
+@keyframes anim_circle-vue {
+	to {
+		stroke-dashoffset: strokeDashoffset($porcent-vue);
+	}
+}
+
 
 </style>
 

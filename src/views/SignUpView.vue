@@ -21,7 +21,7 @@
     <input type="password" class="form-control pass m-auto" id="password" v-model="password">
   </div>
     <div class="form-group">
-    <label class="form-control" v-show="userMsg">{{userMsg}}</label>
+    <label class="form-control" v-if="userMsg" v-show="userMsg">{{userMsg}}</label>
   </div>
   <button class="btn btn-primary my-5" type="submit">Submit</button>
 </form>

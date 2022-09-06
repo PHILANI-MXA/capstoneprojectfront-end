@@ -1,6 +1,6 @@
 <template>
-<div class="container p-3">
-  <h3>About</h3>
+<div class="container p-5">
+  <h2 class="fw-bold fs-lg text-black">About</h2>
       <div class="row">
           <div class="col-sm-4 block1">
       <h4 class="d-block justify-items center text-center"></h4>
