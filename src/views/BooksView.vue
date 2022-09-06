@@ -3,7 +3,7 @@
 
 <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
 <div class=" row d-flex justify-content-center justify-content-between">
-<div  v-for="product in products" :key="product.id" class="card mb-3 d-flex" style="max-width: 540px;">
+<div  v-for="product in products" :key="product.id" class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img :src="product.img" class="img-fluid rounded-start" alt="title">
@@ -22,7 +22,8 @@
 </template>
 
 <script>
-    import BooksView from '@/views/BooksView'
+import BooksView from '@/views/BooksView';
+
 export default {
   name: '',
   components: {

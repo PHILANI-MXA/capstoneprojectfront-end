@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
 import router from '@/router';
+import createPersistedState from 'vuex-persistedstate';
 
 const bookLib = 'https://capstone-fullstack-project.herokuapp.com/';
 export default createStore({
@@ -8,7 +9,8 @@ export default createStore({
     users: null,
     user: null,
     products: null,
-    product: null
+    product: null,
+    userMsg: null
   },
   getters: {
     getUsers: state => state.users,
@@ -32,6 +34,9 @@ export default createStore({
     setfavourites: (state, favourites) => {
       state.favourites = favourites;
       console.log(favourites);
+    },
+    setUserMsg (state, value) {
+      state.userMsg = value;
     }
 
   },
@@ -75,9 +80,12 @@ export default createStore({
         password
       };
       const res = await axios.post(bookLib + 'users/register', data);
-      const { results } = await res.data;
+      const { results, msg, err } = await res.data;
       if (results) {
         context.commit('setUsers', results);
+        context.commit('setUserMsg', msg);
+      } else {
+        context.commit('setUserMsg', err);
       }
     },
     login: async (context, payload) => {
@@ -89,15 +97,15 @@ export default createStore({
       const res = await axios.post(bookLib + 'users/login', data);
       const results = await res.data;
       if (results) {
-        router.push({ name: 'allbooks' });
+        router.push({ name: 'favorites' });
       }
     },
-    getCart: (context, id) => {
+    getfavourites: (context, id) => {
       if (context.state.users.user_id === null) {
         alert('Please Login');
       } else {
         id = context.state.users.user_id;
-        fetch(`https://capt.herokuapp.com/users/${id}/cart`, {
+        fetch(`https://capstone-fullstack-project.herokuapp.com/users/${id}/favourites`, {
           method: 'GET',
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -108,7 +116,7 @@ export default createStore({
           .then((data) => {
             // console.log(data);
             if (data.results != null) {
-              context.commit('setCart', (data.results));
+              context.commit('setfavourites', (data.results));
             }
           });
       }
@@ -116,26 +124,21 @@ export default createStore({
 
     addTofavourites: async (context, product, id) => {
       console.log(product);
-      const alert = { alert };
       if (context.state.users === null) {
         alert('Please Login');
       } else {
         id = context.state.users.user_id;
         fetch(`http://localhost:3000/users/${id}/favourites`, {
-        // fetch(`https://capt.herokuapp.com/users/${id}/favourites`, {
           method: 'POST',
           body: JSON.stringify(product),
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
-            // "x-auth-token": context.state.token,
           }
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            // if (data != null) {
             context.dispatch('getfavourites', (id));
-            // }
           });
       }
     },
@@ -154,12 +157,11 @@ export default createStore({
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          // if (data != null) {
           context.dispatch('getfavourites', (id));
-        // }
         });
     }
   },
   modules: {
-  }
+  },
+  plugins: [createPersistedState()]
 });

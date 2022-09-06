@@ -26,6 +26,9 @@
           <li class="nav-item">
           <router-link class="text-decoration-none text-black invisible" to="/admin">Admin</router-link>
         </li>
+           <li class="nav-item">
+          <router-link class="text-decoration-none text-black" to="/contact">Contact Us</router-link>
+        </li>
          <li class="nav-item">
           <router-link class="text-decoration-none text-black favourite float-end" to="/favorites"><i class="bi bi-heart-fill"></i></router-link>
         </li>
