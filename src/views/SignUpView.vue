@@ -1,5 +1,5 @@
 <template>
-<div id="signup" class="container min-vh-100">
+<div id="signup" class="container min-h-100">
 <h2 class="fw-bold p-2">Register</h2>
 <div class="col-md-6 m-auto">
     <form class="container border border-black h-100" @submit.prevent="register">
