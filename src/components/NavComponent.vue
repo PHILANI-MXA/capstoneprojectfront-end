@@ -65,8 +65,4 @@ top: 0;
 background-color: rgb(46,59,122);
 z-index:50;
 }
-
-.favourite{
-    margin-left: 400px;
-}
 </style>
