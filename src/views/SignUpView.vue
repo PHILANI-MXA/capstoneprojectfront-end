@@ -20,24 +20,35 @@
     <label for="password">password</label>
     <input type="password" class="form-control pass m-auto" id="password" v-model="password">
   </div>
+  <LoadingComponent v-show="isLoading"/>
     <div class="form-group">
-    <label class="form-control" v-if="userMsg" v-show="userMsg">{{userMsg}}</label>
+    <label class="form-control" v-show="userMsg">{{userMsg}}</label>
   </div>
+  
   <button class="btn btn-primary my-5" type="submit">Submit</button>
+  
 </form>
+<div v-if="loader">
+
 </div>
 </div>
-   
+
+</div>
+
+
+
 </template>
 
 <script>
 import router from '@/router';
 import SignUpView from '@/views/SignUpView'
+import LoadingComponentVue from '@/components/LoadingComponent.vue';
 
 export default {
   name: '',
   components: {
-      SignUpView
+    SignUpView,
+    LoadingComponentVue
     },
     data() {
     return {
@@ -45,13 +56,15 @@ export default {
             lastName: '',
             email: '',
             password: ''
-
         }
   },
-      computed: {
+  computed: {
     userMsg() {
       return this.$store.state.userMsg
-    }
+    },
+    isLoading() {
+       return this.$store.state.isLoading;
+     }
   },
     methods: {
         register() {
@@ -99,4 +112,5 @@ export default {
     background-color: black;
     color: white;
 }
+
 </style>

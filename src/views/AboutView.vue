@@ -1,36 +1,93 @@
 <template>
 <div class="container p-5">
-  <h2 class="fw-bold fs-lg text-black">About</h2>
-    <div class="row">
-      <div class=" emptyy vh-100 container w-100"></div>
+  <h2 class="fw-bold fs-lg text-black bg-secondary">About</h2>
+
+<div class=" row d-flex justify-content-center justify-content-between">
+<div v-for="product in pictures" class="col-md-2 card d-flex" :key="product.id">
+<div>
+  <div class="card-header ">
+  <h5 class="card-title mt-0">{{product.title}}</h5>
+  <p class="card-text">{{product.category}}</p>
+  </div>
+  <div class="card-body">
+  <img class="img-fluid image m-auto" :src="product.img" :alt="product.title">
+    <!-- <p class="card-text description productdesc">{{product.product_description}}</p> -->
+    <p class="card-text">{{product.price}}</p>
+    <!-- <router-link :to="{name: 'cart',params:{id:product.product_id}}"> <button class="cart" @click="addToCart">add to cart</button></router-link>
+    <router-link :to="{name:'SingleProduct',params:{id:product.product_id}}">
+    <button>View</button>
+    </router-link> -->
+</div>
+</div>
+<div class="row-12">
+<div  v-for="card in about" :key="card.id" class="carding">
+  <div class="row">
+    <div class="">
+      <p>{{card.id}}</p>
+    </div>
+      <div class="card-body">
+        <p>{{card.aboutpara}}</p>
+      </div>
+  </div>
+</div>
+</div>
     </div>
   <div class="row margin-top">
     <div class="col-sm-12 block-contain">
       <div class="row">
-      
         <div class="col-sm-12 col-md-6">
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
+</div>
 </template>
 
 <script>
 import AboutView from '@/views/AboutView';
 
 export default {
-  components:{
+  components: {
     AboutView
+  },
+  computed: {
+    about() {
+      return this.$store.state.about;
+    },
+      pictures() {
+      return this.$store.state.pictures;
+    }
   }
-  }
+}
 
 
 </script>
 
 <style scoped>
+
+.carding{
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+color: black;
+font-family: San-Francisco;
+transition: 0.4s ease-out;
+margin-bottom: 10px;
+
+  }
+.card{
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+color: black;
+font-family: San-Francisco;
+transition: 0.4s ease-out;
+margin-bottom: 10px;
+width: 40%;
+}
 .container {
   text-align: center;
   color: white;
@@ -135,6 +192,10 @@ font-weight: bolder;
 .emptyy{
   height: 100;
 }
+
+
+/* From uiverse.io by @adamgiebl */
+
 
 </style>
 

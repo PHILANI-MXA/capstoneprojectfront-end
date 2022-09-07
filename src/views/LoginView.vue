@@ -11,6 +11,7 @@
     <label for="password">password</label>
     <input type="password" class="form-control pass m-auto" id="password" v-model="password">
   </div>
+  <LoadingComponent v-show="isLoading"/>
   <button class="btn btn-primary my-5" type="submit">Submit</button>
 </form>
 </div>
@@ -18,17 +19,23 @@
 </template>
 
 <script>
-import LoginView from '@/views/LoginView'
+import LoginView from '@/views/LoginView';
+import LoadingComponent from '@/components/LoadingComponent.vue';
 export default {
     name: '',
     components: {
-        LoginView
+    LoginView,
+    LoadingComponent
+    },
+    computed: {
+        isLoading() {
+            return this.$store.state.isLoading;
+        }
     },
     data() {
         return {
             email: '',
-            password: ''
-
+            password: '',
         }
     },
     methods: {
@@ -36,7 +43,7 @@ export default {
             this.$store.dispatch('login', {
             email: this.email,
             password: this.password
-        });
+            });
         }
     }
 }
