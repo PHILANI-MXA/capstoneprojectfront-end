@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="container min-vh-100">
+<div>
 <h2>User Profile</h2>
 <div v-if="user">Welcome {{ user.f }}</div>
     </div>
@@ -16,6 +17,7 @@
 				<p>{{user.email}}</p>
 
 			</div> </div>
+            </div>
 </template>
 
 <script>

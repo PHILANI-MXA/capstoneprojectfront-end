@@ -1,46 +1,106 @@
 <template>
-<div class="container p-5">
-  <h2 class="fw-bold fs-lg text-black bg-secondary">About</h2>
+<div class="container min-vh-100">
+<h1 class="text-primary">About</h1>
+      <div class="row">
+          <div class="col-sm-4 block1">
+      <h4 class="d-block justify-items center text-center"></h4>
+    </div>
+        <div class="col-sm-8 block2">
+          <h2></h2>
+        </div>
+    </div>
 
-<div class=" row d-flex justify-content-center justify-content-between">
-<div v-for="product in pictures" class="col-md-2 card d-flex" :key="product.id">
-<div>
-  <div class="card-header ">
-  <h5 class="card-title mt-0">{{product.title}}</h5>
-  <p class="card-text">{{product.category}}</p>
-  </div>
-  <div class="card-body">
-  <img class="img-fluid image m-auto" :src="product.img" :alt="product.title">
-    <!-- <p class="card-text description productdesc">{{product.product_description}}</p> -->
-    <p class="card-text">{{product.price}}</p>
-    <!-- <router-link :to="{name: 'cart',params:{id:product.product_id}}"> <button class="cart" @click="addToCart">add to cart</button></router-link>
-    <router-link :to="{name:'SingleProduct',params:{id:product.product_id}}">
-    <button>View</button>
-    </router-link> -->
-</div>
-</div>
-<div class="row-12">
-<div  v-for="card in about" :key="card.id" class="carding">
-  <div class="row">
-    <div class="">
-      <p>{{card.id}}</p>
-    </div>
-      <div class="card-body">
-        <p>{{card.aboutpara}}</p>
-      </div>
-  </div>
-</div>
-</div>
-    </div>
+
   <div class="row margin-top">
     <div class="col-sm-12 block-contain">
       <div class="row">
+      
         <div class="col-sm-12 col-md-6">
+          <div class="row">
+            <div class="col-sm-12 block3">
+              <h1></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 block4">
+              <h1></h1>
+            </div>
+            <div class="col-md-5 block5">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-3 block6">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.postimg.cc/Bb1CC4Kj/Robert-Lewa.jpg" class="d-block w-100" alt="responsive carou">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.postimg.cc/SN6P0fnJ/Messi-psg.jpg" class="d-block w-100" alt="responsive carou">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.postimg.cc/tgKdC8fy/mario-klassen-70-Yx-STWa2-Zw-unsplash.jpg" class="d-block w-100" alt="responsive carou">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+  <div>                    <select name="" id="" class="my-1">
+                            <option value="" disabled hidden selected>International</option>
+                            <option value="Spain"><a href="https://supersport.com/football/premier-league/logs/"></a>Spain</option>
+                            <option value="France"> France</option>
+                            <option value="Germany"> Germany</option>
+                            <option value="England"> England</option>
+                             <option value="South Africa"> South Africa</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Scotland"> Scotland</option>
+                            <option value="International">Netherlands</option>
+                        </select>
+                          <select name="" id="">
+                            <option value="" disabled hidden selected>Leagues</option>
+                            <option value="EPL">English Premier League</option>
+                            <option value="Championship">Championmship</option>
+                            <option value="PremierShip">DSTV premiership</option>
+                            <option value="Belgian">First Division</option>
+                            <option value="Bundasliga"> Bundasliga</option>
+                            <option value="SerieA<"> Serie A</option>
+                            <option value="La-liga"> La Liga</option>
+                            <option value="Ligue1">Ligue 1</option>
+                            <option value="eredivisie">Eredivisie</option>
+                        </select>
+                        </div>
+
+                        <h6 class="my-1 text-danger">Transfer Market <br>Trending <br>Football Transfers <br>Rumours <br>Market Value <br>Latest Transfers <br>Loan Players</h6>
+                        <p class="text-bold"><strong> The transfer market is the arena in which football players are available for transfer to clubs. The transfer market consists of a list of players available for transfer, and also the money moving between clubs as they contest to purchase and sell these players</strong>.</p>
+
+</div>
+
+<div class="col-sm-12 col-md-3">
+          <div class="row">
+            <div class="col-sm-12 block7">
+              <h1></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 block8">
+              <h1></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 block9">
+              <h1></h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 </template>
 
@@ -65,6 +125,11 @@ export default {
 </script>
 
 <style scoped>
+
+  img{
+    height: 400px;
+    width: 400px;
+  }
 
 .carding{
 display: flex;
