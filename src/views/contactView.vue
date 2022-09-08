@@ -127,7 +127,7 @@ select {
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: #4bc970;
+  background-color: #4b5ec9;
   font-size: 18px;
   text-align: center;
   font-style: normal;
@@ -160,7 +160,7 @@ label.light {
 }
 
 .number {
-  background-color: #5fcf80;
+  background-color: #5f86cf;
   color: #fff;
   height: 30px;
   width: 30px;

@@ -187,7 +187,7 @@
 
 <style lang="scss" scoped>
 
-  .input{
+.input{
     align-content: center;
     margin: auto;
   }
