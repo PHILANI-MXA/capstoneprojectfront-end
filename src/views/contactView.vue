@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
   margin: 0 0 30px 0;
   text-align: center;
