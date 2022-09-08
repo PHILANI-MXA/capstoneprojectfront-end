@@ -8,10 +8,11 @@
     <div class="col-md-4">
       <img :src="product.img" class="img-fluid rounded-start" alt="title">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 border border-black">
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.book_description}}</p>
+        <button>view</button>
       </div>
     </div>
   </div>

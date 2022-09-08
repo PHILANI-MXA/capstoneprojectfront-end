@@ -1,6 +1,5 @@
 <template>
-    -----------------------------------------------------------------
-    <div class="container  min-h-100">
+    <div class="container  min-h-100 p-2">
 	<div class="screen">
 		<div class="screen__content">
 			<form class="login"  @submit.prevent="login">
@@ -28,7 +27,6 @@
 		</div>
 	</div>
 </div>
-    ------------------------------------------------------------------
     <!-- <div id="login" class="container min-h-100">
 <h2 class="fw-bold p-2">Login</h2>
 <div class="col-md-6 m-auto">
