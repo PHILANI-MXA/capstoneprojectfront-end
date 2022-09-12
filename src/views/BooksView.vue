@@ -3,7 +3,7 @@
 
 <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
 <div class=" row d-flex justify-content-center justify-content-between">
-<div  v-for="product in products" :key="product.id" class="card mb-3" style="max-width: 540px;">
+<div  v-for="product in products" :key="product.book_id" class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img :src="product.img" class="img-fluid rounded-start" alt="title">
@@ -12,9 +12,9 @@
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.book_description}}</p>
-    <!-- <router-link :to="{name:'SingleBook',params:{id:product.book_id}}"> -->
+    <router-link :to="{name:'single',params:{id:product.book_id}}">
     <button>View</button>
-    <!-- </router-link> -->
+    </router-link>
       </div>
     </div>
   </div>

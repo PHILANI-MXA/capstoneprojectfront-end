@@ -32,6 +32,9 @@
            <li class="nav-item">
           <router-link class="text-decoration-none text-black" to="/contact">Contact Us</router-link>
         </li>
+        <!-- <li class="nav-item">
+          <router-link class="text-decoration-none text-black" to="/single">Single</router-link>
+        </li> -->
          <li class="nav-item">
           <router-link class="text-decoration-none text-black favourite float-end" to="/favorites"><i class="bi bi-heart-fill"></i></router-link>
         </li>
@@ -62,7 +65,7 @@ nav {
 position:fixed;
 width: 100%;
 top: 0;
-background-color: rgb(46,59,122);
+background-color: #5C5696;
 z-index:50;
 }
 </style>

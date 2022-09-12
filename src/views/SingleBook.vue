@@ -13,14 +13,14 @@
       </div>
       <div id="productbox">
         <div class="productdetails">
-          <h2>Product Name:</h2>
+          <h2>Product Name: {{ item.title }}</h2>
           <br>
-          <h1>{{ item.title }}</h1>
+          <h2></h2>
         </div>
         <div class="product_description">
           <h2>Details</h2>
           <br>
-          <h1>{{ item.product_description }}</h1>
+          <h1>{{ item.book_description }}</h1>
         </div>
         <div class="productprice">
           <h5></h5>
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  props: ['id'],
+  props: ['book_id'],
   computed: {
     product() {
       return this.$store.state.product
