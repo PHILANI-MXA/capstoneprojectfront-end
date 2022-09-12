@@ -12,7 +12,9 @@
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.book_description}}</p>
-        <button>view</button>
+    <!-- <router-link :to="{name:'SingleBook',params:{id:product.book_id}}"> -->
+    <button>View</button>
+    <!-- </router-link> -->
       </div>
     </div>
   </div>
@@ -48,6 +50,8 @@ export default {
   },
   mounted() {
     this.$store.dispatch('fetchProducts');
+  
+    this.$store.dispatch('fetchProduct', this.$route.params.id)
   },
   methods: {
     addToCart() {

@@ -69,11 +69,18 @@ export default createStore({
       }
     },
     fetchUser: async (context) => {
-      const res = await axios.get(bookLib + 'user');
+      const res = await axios.get(bookLib + 'user/' + user_id);
       const { results } = await res.data;
       if (results) {
         context.commit('setUser', results);
       }
+    },
+    deleteUser: async (context, id) => {
+      fetch(`${bookLib}/users/${id}`, {
+        method: 'DELETE'
+      })
+        .then((response) => response.json())
+        .then(() => context.dispatch('getUser'));
     },
 
     register: async (context, payload) => {
@@ -92,7 +99,7 @@ export default createStore({
         context.commit('setLoading', false);
         console.log(results);
       }
-      axios.get('/https://capstone-fullstack-project.herokuapp.com/products/')
+      axios.get('https://capstone-fullstack-project.herokuapp.com/products/')
         .catch(function (error) {
           if (error.response) {
             // Request made and server responded
@@ -107,7 +114,7 @@ export default createStore({
             console.log('Error', error.message);
           }
         });
-      axios.get('/https://capstone-fullstack-project.herokuapp.com/users/')
+      axios.get('https://capstone-fullstack-project.herokuapp.com/users/')
         .catch(function (error) {
           if (error.response) {
             // Request made and server responded
@@ -130,15 +137,15 @@ export default createStore({
     login: async (context, payload) => {
       const { email, password } = payload;
       const data = {
-        email,
-        password
+        email: email,
+        password: password
       };
       const res = await axios.post(bookLib + 'users/login', data);
       const results = await res.data;
       if (results) {
         console.log(results);
         context.commit('SetUser', results);
-        router.push({ name: 'user' });
+        router.push({ name: 'admin' });
       }
     },
     getfavourites: (context, id) => {
@@ -146,7 +153,7 @@ export default createStore({
         console.log('Please Login');
       } else {
         id = context.state.users.user_id;
-        fetch(`https://capstone-fullstack-project.herokuapp.com/users/${id}/`, {
+        fetch(`${bookLib}/users/${id}`, {
           method: 'GET',
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -161,20 +168,19 @@ export default createStore({
           });
       }
     },
-    // getUser: async (context, user_id
-    // ) => {
-    //   fetch(bookLib + user_id)
-    //     .then((response) => response.json())
-    //     .then((user) => context.commit('setUser', user[0]));
-    // },
+    getUser: async (context, user_id
+    ) => {
+      fetch(bookLib + user_id)
+        .then((response) => response.json())
+        .then((user) => context.commit('setUser', user[0]));
+    },
     addTofavourites: async (context, product, id) => {
       console.log(product);
       if (context.state.users === null) {
         console.log('Please Login');
-        // alert('Please Login');
       } else {
         id = context.state.users.user_id;
-        fetch(`https://capstone-fullstack-project.herokuapp.com/users/${id}/favourites`, {
+        fetch(`${bookLib}/users/${id}/favourites`, {
           method: 'POST',
           body: JSON.stringify(product),
           headers: {
@@ -189,10 +195,10 @@ export default createStore({
       }
     },
 
-    DeletItem: async (context, product, id) => {
+    deletItem: async (context, product, id) => {
       console.log(product);
       id = context.state.users.user_id;
-      fetch(`https://capstone-fullstack-project.herokuapp.com/users/${id}/favourites/${product}`, {
+      fetch(`${bookLib}/users/${id}/favourites/${product}`, {
         method: 'DELETE',
         body: JSON.stringify(product),
         headers: {

@@ -266,15 +266,6 @@ export default {
 	color: #7875B5;
 }
 
-.social-login {
-	position: absolute;
-	height: 140px;
-	width: 160px;
-	text-align: center;
-	bottom: 0px;
-	right: 0px;
-	color: #fff;
-}
 
 .social-icons {
 	display: flex;
