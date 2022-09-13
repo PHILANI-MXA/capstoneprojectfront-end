@@ -77,7 +77,7 @@ export default createStore({
     },
     deleteUser: async (context, user_id) => {
       fetch(`${bookLib}/users/${user_id}`, {
-        method: 'DELETE'
+        // method: 'DELETE'
       })
         .then((response) => response.json())
         .then(() => context.dispatch('getUser'));
@@ -126,10 +126,10 @@ export default createStore({
       } else {
         user_id = context.state.users.user_id;
         fetch(`${bookLib}/users/${user_id}`, {
-          method: 'GET',
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-          }
+          // method: 'GET',
+          // headers: {
+          //   'Content-type': 'application/json; charset=UTF-8'
+          // }
         })
           .then((res) => res.json())
           .then((data) => {
@@ -152,11 +152,11 @@ export default createStore({
       } else {
         id = context.state.users.user_id;
         fetch(`${bookLib}/users/${user_id}/favourites`, {
-          method: 'POST',
-          body: JSON.stringify(product),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-          }
+          // method: 'POST',
+          // body: JSON.stringify(product),
+          // headers: {
+          //   'Content-type': 'application/json; charset=UTF-8'
+          // }
         })
           .then((res) => res.json())
           .then((data) => {
@@ -170,11 +170,11 @@ export default createStore({
       console.log(product);
       user_id = context.state.users.user_id;
       fetch(`${bookLib}/users/${user_id}/favourites/${product}`, {
-        method: 'DELETE',
-        body: JSON.stringify(product),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8'
-        }
+        // method: 'DELETE',
+        // body: JSON.stringify(product),
+        // headers: {
+        //   'Content-type': 'application/json; charset=UTF-8'
+        // }
       })
         .then((res) => res.json())
         .then((data) => {

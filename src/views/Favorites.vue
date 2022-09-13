@@ -13,7 +13,8 @@
 <p class="card-text">
 </p>
 <div class="product-btns">
-<button  @click="this.$store.dispatch('DeletItem',f.book_id)">Remove from Favourite</button>
+<button  @click="this.$store.dispatch('DeletItem',f.book_id)">Remove</button>
+<button  @click="this.$store.dispatch('addTofavourites',f.book_id)">Add</button>
 </div>
 </div>
 </div>
