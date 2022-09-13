@@ -15,9 +15,6 @@
         
           <label for="email">Email:</label>
           <input type="email" id="mail" name="user_email">
-       
-          <label for="password">Password:</label>
-          <input type="password" id="password"       name="user_password">
         
           <label>Age:</label>
           <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
