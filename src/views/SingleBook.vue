@@ -61,4 +61,10 @@ export default {
   border-radius: 10%;
   margin: auto;
 }
+
+img{
+  width: 200px;
+  height: 200px;
+
+}
 </style>

@@ -11,7 +11,7 @@
     <div class="col-md-8 border border-black">
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.book_description}}</p>
+        <p class="card-text">{{product.BookCategory}}</p>
     <router-link :to="{name:'single',params:{id:product.book_id}}">
     <button>View</button>
     </router-link>
