@@ -33,6 +33,12 @@
     </div>
         <div class="col-sm-8 block2 overflow-auto text-black">
           <h2>About Us</h2>
+          <p>We promote social justice</p>
+          <p>Social justice is the theory that all people in society should have equal opportunities and rights. Social justice aims to ensure that every individual enjoys equal privileges without any kind of discrimination.
+
+Social justice is extremely crucial for every individual's life and development, especially for minority groups of the population such as disabled people, the LGBTQ+ community, refugees, minority ethnic groups and women. Without social justice, there is no fairness and equality in society, only degradation of the individual's integrity and dignity.</p>
+
+<h4>Our Library treats everyone equally and we plan to provide more services and to fight the digital divide among communities!</h4>
         </div>
     </div>
 </div>

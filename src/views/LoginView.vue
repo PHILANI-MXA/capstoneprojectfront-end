@@ -12,7 +12,7 @@
 					<input type="password" class="login__input" placeholder="Password" v-model="password">
 				</div>
 				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
+					<span class="button__text  log">Log In Now</span>
 
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>
@@ -79,6 +79,11 @@ export default {
 </script>
 
 <style scoped>
+
+
+	.log{
+		margin: auto;
+	}
 /* .form{
     background-color: #fefefe;
 }
@@ -125,8 +130,8 @@ export default {
 	min-height: 100vh;
 }
 
-.screen {		
-	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
+.screen {
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);
 	position: relative;	
 	height: 600px;
 	width: 360px;	
@@ -139,7 +144,7 @@ export default {
 	height: 100%;
 }
 
-.screen__background {		
+.screen__background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -165,7 +170,7 @@ export default {
 	width: 220px;
 	background: #6C63AC;	
 	top: -172px;
-	right: 0;	
+	right: 0;
 	border-radius: 32px;
 }
 
@@ -272,12 +277,12 @@ export default {
 .social-login__icon {
 	padding: 20px 10px;
 	color: #fff;
-	text-decoration: none;	
+	text-decoration: none;
 	text-shadow: 0px 0px 8px #7875B5;
 }
 
 .social-login__icon:hover {
-	transform: scale(1.5);	
+	transform: scale(1.5);
 }
 
 </style>

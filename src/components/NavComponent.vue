@@ -24,7 +24,7 @@
              <router-link class="text-decoration-none text-black" to="/login">Login</router-link>
         </li>
           <li class="nav-item">
-          <router-link class="text-decoration-none text-black" to="/user">User</router-link>
+          <router-link class="text-decoration-none text-black" to="/user">Users</router-link>
         </li>
           <li class="nav-item">
           <router-link class="text-decoration-none text-black" to="/admin">Admin</router-link>
@@ -47,10 +47,16 @@
 </template>
 
 <style>
+ @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	font-family: Raleway, sans-serif;
+}
 .nav-item{
 position: relative;
 padding: 20px;
 font-size: larger;
+font-family: Raleway, sans-serif;
 }
 .navbar-brand{
   font-style: italic;
