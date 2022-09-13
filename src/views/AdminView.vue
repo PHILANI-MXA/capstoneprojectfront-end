@@ -3,6 +3,46 @@
 
   <h4 class="fw-bold display-6">Admin page</h4>
 
+  <router-link to="/deleteacc">
+      <div class="">
+          <button class="float-start">Delete Account</button>
+      </div>
+    </router-link>
+
+
+ 
+    <button type="button" class="float-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+Update your account
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Update your account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+        <div class="modal-body">
+      </div>
+      
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <router-link to="/">
+      <div class="">
+          <button class="float-end">Logout</button>
+      </div>
+    </router-link>
+
+
 <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
 <div class=" row d-flex justify-content-center justify-content-between">
 <div  v-for="product in products" :key="product.id" class="card mb-3" style="max-width: 540px;">

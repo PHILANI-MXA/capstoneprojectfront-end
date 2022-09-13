@@ -51,6 +51,16 @@ const routes = [
     path: '/single/:id',
     name: 'single',
     component: () => import('../views/SingleBook.vue')
+  },
+  {
+    path: '/deleteacc',
+    name: 'deleteacc',
+    component: () => import('../views/ManageAcc.vue')
+  },
+  {
+    path: '/editmodal',
+    name: 'editmodal',
+    component: () => import('../components/editModal.vue')
   }
 ];
 

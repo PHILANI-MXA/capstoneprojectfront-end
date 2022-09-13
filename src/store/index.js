@@ -75,6 +75,19 @@ export default createStore({
         context.commit('setUser', results);
       }
     },
+    // deleteUser ({ commit }) {
+    //   axios
+    //     .get(bookLib + '', {
+    //       headers: {
+    //         'Content-type': 'application/json; charset=UTF-8'
+    //       }
+    //     })
+    //     .then(response => response.data)
+    //     .then(items => {
+    //       console.log(items);
+    //       commit('deleteUser', items);
+    //     });
+    // },
     deleteUser: async (context, user_id) => {
       fetch(`${bookLib}/users/${user_id}`, {
         // method: 'DELETE'
