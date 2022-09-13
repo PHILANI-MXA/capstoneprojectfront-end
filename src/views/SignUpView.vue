@@ -27,7 +27,7 @@
 					<input type="text" class="login__input" placeholder="enter your password" v-model="password">
 				</div>
 				<div>	<button class="button login__submit">
-					<span class="button__lead text text-center register">Register now</span>
+					<span class="button__lead text text-center register">Register</span>
 
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button></div>
@@ -46,7 +46,6 @@
 </template>
 
 <script>
-import router from '@/router';
 import SignUpView from '@/views/SignUpView'
 import LoadingComponentVue from '@/components/LoadingComponent.vue';
 

@@ -68,15 +68,15 @@ export default createStore({
         context.commit('setUsers', results);
       }
     },
-    fetchUser: async (context) => {
+    fetchUser: async (context, user_id) => {
       const res = await axios.get(bookLib + 'user/' + user_id);
       const { results } = await res.data;
       if (results) {
         context.commit('setUser', results);
       }
     },
-    deleteUser: async (context, id) => {
-      fetch(`${bookLib}/users/${id}`, {
+    deleteUser: async (context, user_id) => {
+      fetch(`${bookLib}/users/${user_id}`, {
         method: 'DELETE'
       })
         .then((response) => response.json())
@@ -99,48 +99,26 @@ export default createStore({
         context.commit('setLoading', false);
         console.log(results);
       }
-      axios.get('https://capstone-fullstack-project.herokuapp.com/products/')
-        .catch(function (error) {
-          if (error.response) {
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          } else if (error.request) {
-            console.log(error.request);
-          } else {
-            console.log('Error', error.message);
-          }
-        });
-      axios.get('https://capstone-fullstack-project.herokuapp.com/users/')
-        .catch(function (error) {
-          if (error.response) {
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          } else if (error.request) {
-            console.log(error.request);
-          } else {
-            console.log('Error', error.message);
-          }
-        });
       if (err) {
         context.commit('setUserMsg', err);
         context.commit('setLoading', true);
       }
     },
+
     login: async (context, payload) => {
       const { email, password } = payload;
       const data = {
-        email: email,
-        password: password
+        email,
+        password
       };
       const res = await axios.post(bookLib + 'users/login', data);
       const results = await res.data;
       if (results) {
         console.log(results);
-        context.commit('SetUser', results);
+        context.commit('SetUsers', results);
         router.push({ name: 'admin' });
       }
+      console.log(results);
     },
     getfavourites: (context, user_id) => {
       if (context.state.users.user_id === null) {

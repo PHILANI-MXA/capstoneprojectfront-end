@@ -12,7 +12,7 @@
 					<input type="password" class="login__input" placeholder="Password" v-model="password">
 				</div>
 				<button class="button login__submit">
-					<span class="button__text  log">Log In Now</span>
+					<span class="button__text  log">Login</span>
 
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>
@@ -41,6 +41,9 @@ export default {
     computed: {
         isLoading() {
             return this.$store.state.isLoading;
+		},
+		 user(){
+        return this.$store.state.user;
         }
     },
     data() {
