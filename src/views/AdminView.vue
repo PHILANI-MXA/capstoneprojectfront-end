@@ -11,8 +11,7 @@
     <div class="col-md-8 border border-black">
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text">{{product.book_description}}</p>
-        <button class="btn btn-success">view</button>
+        <p class="card-text">{{product.BookCategory}}</p>
         <button class="btn btn-secondary">Edit</button>
         <button class="btn btn-danger">delete</button>
         <button class="btn btn-primary">add</button>
