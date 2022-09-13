@@ -1,6 +1,8 @@
 <template>
 <div class="container min-vh-100 p-5">
 
+  <h4 class="fw-bold display-6">Admin page</h4>
+
 <div><input type="text" id="" v-model="search" placeholder="Search" class="w-100 my-5 justify-content-center"></div>
 <div class=" row d-flex justify-content-center justify-content-between">
 <div  v-for="product in products" :key="product.id" class="card mb-3" style="max-width: 540px;">
@@ -11,9 +13,10 @@
     <div class="col-md-8 border border-black">
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
+        <p>Please take care of this book and consult us if in need to loan it</p>
         <p class="card-text">{{product.BookCategory}}</p>
         <button class="btn btn-secondary">Edit</button>
-        <button class="btn btn-danger">delete</button>
+        <button class="btn btn-danger"  @click="this.$store.dispatch('DeletItem',product.book_id)">delete</button>
         <button class="btn btn-primary">add</button>
       </div>
     </div>

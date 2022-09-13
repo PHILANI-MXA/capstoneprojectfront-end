@@ -19,7 +19,6 @@
         </div>
         <div class="product_description">
           <h2>Details</h2>
-          <br>
           <h1>{{ item.book_description }}</h1>
         </div>
         <div class="productprice">

@@ -27,7 +27,7 @@
           <router-link class="text-decoration-none text-black" to="/user">Users</router-link>
         </li>
           <li class="nav-item">
-          <router-link class="text-decoration-none text-black" to="/admin">Admin</router-link>
+          <router-link class="text-decoration-none text-black invisible" to="/admin">Admin</router-link>
         </li>
            <li class="nav-item">
           <router-link class="text-decoration-none text-black" to="/contact">Contact Us</router-link>

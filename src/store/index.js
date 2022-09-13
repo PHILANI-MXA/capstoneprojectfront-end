@@ -102,30 +102,24 @@ export default createStore({
       axios.get('https://capstone-fullstack-project.herokuapp.com/products/')
         .catch(function (error) {
           if (error.response) {
-            // Request made and server responded
             console.log(error.response.data);
             console.log(error.response.status);
             console.log(error.response.headers);
           } else if (error.request) {
-            // The request was made but no response was received
             console.log(error.request);
           } else {
-          // Something happened in setting up the request that triggered an Error
             console.log('Error', error.message);
           }
         });
       axios.get('https://capstone-fullstack-project.herokuapp.com/users/')
         .catch(function (error) {
           if (error.response) {
-            // Request made and server responded
             console.log(error.response.data);
             console.log(error.response.status);
             console.log(error.response.headers);
           } else if (error.request) {
-            // The request was made but no response was received
             console.log(error.request);
           } else {
-          // Something happened in setting up the request that triggered an Error
             console.log('Error', error.message);
           }
         });
@@ -148,12 +142,12 @@ export default createStore({
         router.push({ name: 'admin' });
       }
     },
-    getfavourites: (context, id) => {
+    getfavourites: (context, user_id) => {
       if (context.state.users.user_id === null) {
         console.log('Please Login');
       } else {
-        id = context.state.users.user_id;
-        fetch(`${bookLib}/users/${id}`, {
+        user_id = context.state.users.user_id;
+        fetch(`${bookLib}/users/${user_id}`, {
           method: 'GET',
           headers: {
             'Content-type': 'application/json; charset=UTF-8'
@@ -161,7 +155,6 @@ export default createStore({
         })
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
             if (data.results != null) {
               context.commit('setfavourites', (data.results));
             }
@@ -180,7 +173,7 @@ export default createStore({
         console.log('Please Login');
       } else {
         id = context.state.users.user_id;
-        fetch(`${bookLib}/users/${id}/favourites`, {
+        fetch(`${bookLib}/users/${user_id}/favourites`, {
           method: 'POST',
           body: JSON.stringify(product),
           headers: {
@@ -195,10 +188,10 @@ export default createStore({
       }
     },
 
-    deletItem: async (context, product, id) => {
+    deletItem: async (context, product, user_id) => {
       console.log(product);
-      id = context.state.users.user_id;
-      fetch(`${bookLib}/users/${id}/favourites/${product}`, {
+      user_id = context.state.users.user_id;
+      fetch(`${bookLib}/users/${user_id}/favourites/${product}`, {
         method: 'DELETE',
         body: JSON.stringify(product),
         headers: {
@@ -208,7 +201,7 @@ export default createStore({
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          context.dispatch('getfavourites', (id));
+          context.dispatch('getfavourites', (user_id));
         });
     }
   },

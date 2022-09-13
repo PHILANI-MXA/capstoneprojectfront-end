@@ -12,6 +12,7 @@
       <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.BookCategory}}</p>
+        <p>Please take care of this book and consult us if in need to loan it</p>
     <router-link :to="{name:'single',params:{id:product.book_id}}">
     <button>View</button>
     </router-link>
@@ -78,7 +79,7 @@ flex-wrap: wrap;
 color: black;
 font-family: San-Francisco;
 transition: 0.4s ease-out;
-margin-bottom: 10px;
+margin-bottom: 30px;
 width: 40%;
 }
 .card:hover {

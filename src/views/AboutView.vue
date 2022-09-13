@@ -9,26 +9,6 @@
       <div class="row">
           <div class="col-sm-4 block1">
       <h4 class="d-block justify-items-center text-center"></h4>
-              <!-- <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false"> -->
-  <!-- <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://i.postimg.cc/nhts7Jv9/desola-lanre-ologun-Ig-UR1i-X0mq-M-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/WpgJX8sk/thought-catalog-o0-Qqw21-0-NI-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.postimg.cc/NMVF0qsM/priscilla-du-preez-Xk-KCui44i-M0-unsplash.jpg" class="d-block w-100" alt="responsive carou">
-    </div>
-  </div> -->
-  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> -->
  
     </div>
         <div class="col-sm-8 block2 overflow-auto text-black">
@@ -39,7 +19,7 @@
 Social justice is extremely crucial for every individual's life and development, especially for minority groups of the population such as disabled people, the LGBTQ+ community, refugees, minority ethnic groups and women. Without social justice, there is no fairness and equality in society, only degradation of the individual's integrity and dignity.</p>
 
 <h4>Our Library treats everyone equally and we plan to provide more services and to fight the digital divide among communities!</h4>
-        </div>
+    </div>
     </div>
 </div>
 
